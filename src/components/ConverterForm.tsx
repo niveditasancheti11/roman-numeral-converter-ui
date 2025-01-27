@@ -25,12 +25,6 @@ const ConverterForm: React.FC<ConverterFormProps> = ({ onConvert }) => {
         }
     };
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = Number(e.target.value);
-        if (inputValue >= 1 && inputValue <= 3999) {
-            setValue(inputValue); // Update value within valid range
-        }
-    };
 
     return (
         <Form className="p-3 border rounded">
