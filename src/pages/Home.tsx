@@ -9,6 +9,7 @@ import useRomanNumeralConverter from '../hooks/useRomanNumeralConverter';
 
 const Home: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false); // Dark Mode State
+  // Use custom hook to handle Roman numeral conversion
   const { result, isError, convertToRoman } = useRomanNumeralConverter(BASE_URL);
 
   const handleConvert = (value: number) => {
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <Header onToggleTheme={toggleTheme} darkMode={darkMode} />
-      <main className="container mt-5">
+      <main className="container mt-10">
         <ConverterForm onConvert={handleConvert} />
         <ResultDisplay result={result} isError={isError} />
       </main>

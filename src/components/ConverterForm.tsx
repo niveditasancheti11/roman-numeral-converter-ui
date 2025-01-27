@@ -28,7 +28,7 @@ const ConverterForm: React.FC<ConverterFormProps> = ({ onConvert }) => {
 
     return (
         <Form className="p-3 border rounded">
-            <h2 className="text-center mb-3">Enter a number</h2>
+            <h3 className="text-center mb-3">Enter a number</h3>
             <InputGroup className="mb-3">
                 <Button variant="secondary" onClick={handleDecrement}>
                     -
