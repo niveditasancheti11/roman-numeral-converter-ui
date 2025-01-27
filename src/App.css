@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Button Styles */
+button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #eeeeee;
+}
+
+/* Dark Mode-Specific Bootstrap Component Overrides */
+.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #f8f9fa !important;
+}
+
+.dark-mode .form-control {
+    background-color: #1e1e1e !important;
+    color: #f8f9fa !important;
+}
+
+.dark-mode .alert {
+    background-color: #495057 !important;
+    color: #f8f9fa !important;
+}
+
+footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
