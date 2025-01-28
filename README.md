@@ -68,6 +68,37 @@ A modern and responsive React-based frontend application for converting integers
    npm run preview
    ```
 
+### Build wit Docker
+1. Build the Docker image:
+   ```bash
+   docker build -t roman-numeral-converter-ui .
+   ```
+2. Run the Docker container:
+   ```bash
+   ddocker run -p 3000:3000 roman-numeral-converter-ui .
+   ```
+
+---
+
+## Engineering and Testing Methodology
+
+### Engineering Principles
+- **Component-Driven Development**: The application is designed with reusable and modular React components to ensure scalability and maintainability.
+- **Separation of Concerns**: Business logic is encapsulated in custom hooks (`useRomanNumeralConverter`), utility functions, and service files, promoting better organization, testability, and reusability.
+- **State Management**: Leveraging React's built-in Hooks (e.g., `useState`, `useEffect`) and a custom hook (`useRomanNumeralConverter`) to handle API calls and manage state efficiently, ensuring a clean separation of concerns.
+- **Responsive Design**: The user interface is built using Bootstrap, providing a consistent and adaptive experience across different screen sizes and devices.
+
+### Testing Strategy
+
+#### Unit Testing
+- **Tools Used**: `@testing-library/react` and `jest` for component-level testing.
+- **Coverage**:
+  - Test key components like `ConverterForm`, `ResultDisplay`, and `Header` to ensure they render correctly and handle props accurately.
+  - Validate API integration logic using mock responses.
+- **Run Tests**:
+  ```bash
+  npm test
+
 ---
 
 ## File Structure
@@ -143,7 +174,3 @@ The application communicates with the backend Roman Numeral Converter API using 
 LinkedIn: [Profile](https://www.linkedin.com/in/niveditasancheti11)  
 GitHub: [niveditasancheti11](https://github.com/niveditasancheti11)
 
----
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
